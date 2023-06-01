@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+
+  # # Databases
+  user-db:
+    image: postgres:latest
+    container_name: user-db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: user
+      POSTGRES_USER: usr_user
+      POSTGRES_PASSWORD: pwd_user
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+  transaction-db:
+    image: postgres:latest
+    container_name: transaction-db
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_DB: transaction
+      POSTGRES_USER: usr_transaction
+      POSTGRES_PASSWORD: pwd_transaction
+      POSTGRES_HOST_AUTH_METHOD: trust
