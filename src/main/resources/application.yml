@@ -1,0 +1,14 @@
+server:
+  port: 9090
+
+spring:
+  usr-datasource:
+    jdbcUrl: jdbc:postgresql://localhost:5432/user
+    username: usr_user
+    password: pwd_user
+    driver-class-name: org.postgresql.Driver
+  trx-datasource:
+    jdbcUrl: jdbc:postgresql://localhost:5433/transaction
+    username: usr_transaction
+    password: pwd_transaction
+    driver-class-name: org.postgresql.Driver
